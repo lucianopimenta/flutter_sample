@@ -1,0 +1,18 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:fluttersample/helper/transition.dart';
+
+Future openPage(BuildContext context, Widget page, {bool replace}) {
+  if (replace)
+    return Navigator.pushReplacement(context, SlideRightRoute(page: page));
+  else
+    return Navigator.push(context, SlideRightRoute(page: page));
+}
+
+Future openPageTransition(BuildContext context, PageRouteBuilder builder) {
+  return Navigator.push(context, builder);
+}
+
+Future closePage(BuildContext context, Widget page) {
+  Navigator.pop(context, null);
+}

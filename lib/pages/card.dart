@@ -5,6 +5,15 @@ class CardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+return Scaffold(
+      appBar: AppBar(
+        title: Text("Card no ListView"),
+      ),
+      body: _body()
+    );
+  }
+
+  _body(){
     List<Item> carros = [
       Item(1, "https://img.volanty.com/thumb/inspecao/5770053978947584/20190823/1566553500485.jpg", "Clio", "Renault Clio 1.0 - 2019"),
       Item(2, "https://hyundai.itavema.com.br/media/catalog/product/cache/1/thumbnail/9df78eab33525d08d6e5fb8d27136e95/h/b/hb20-1.jpg", "HB20", "Novo HB20 - 2020"),
@@ -13,6 +22,25 @@ class CardPage extends StatelessWidget {
       Item(5, "https://http2.mlstatic.com/disco-de-freio-ventilado-fiat-uno-vivace-uno-way-2010-D_NQ_NP_819559-MLB31737233830_082019-F.jpg", "Uno", "FIAT Uno Vivace - 2019"),
     ];
 
-    return Container();
+    return ListView.builder(
+            itemCount: carros.length,
+            itemBuilder: (BuildContext context, int index) {
+              Item carro = carros[index];
+
+              return Card(
+                  child: Container(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Center(child: Image.network(carro.urlImage, width: 250,),),
+                        Text(carro.title, style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),),
+                        Text(carro.subTitle, style: TextStyle(fontSize: 12),),
+                      ],
+                    ),
+                  ),
+              );
+            },
+          );
   }
 }

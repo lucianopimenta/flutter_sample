@@ -4,6 +4,7 @@ import 'package:fluttersample/helper/navigation.dart';
 import 'package:fluttersample/model/item.dart';
 import 'package:fluttersample/pages/actionButton.dart';
 import 'package:fluttersample/pages/botoes.dart';
+import 'package:fluttersample/pages/card.dart';
 import 'package:fluttersample/pages/home_drawer.dart';
 import 'package:fluttersample/pages/listView.dart';
 import 'package:fluttersample/pages/login.dart';
@@ -134,6 +135,8 @@ class _HomePageMDState extends State<HomePageMD> {
       case 5: { openPage(context, TabPage(), replace: false); }
       break;
       case 6: { openPage(context, ActionButtonPage(), replace: false); }
+      break;
+      case 7: { openPage(context, CardPage(), replace: false); }
       break;
     }
   }

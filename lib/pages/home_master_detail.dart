@@ -8,6 +8,7 @@ import 'package:fluttersample/pages/card.dart';
 import 'package:fluttersample/pages/home_drawer.dart';
 import 'package:fluttersample/pages/listView.dart';
 import 'package:fluttersample/pages/login.dart';
+import 'package:fluttersample/pages/others.dart';
 import 'package:fluttersample/pages/tab.dart';
 
 class HomePageMD extends StatefulWidget {
@@ -137,6 +138,8 @@ class _HomePageMDState extends State<HomePageMD> {
       case 6: { openPage(context, ActionButtonPage(), replace: false); }
       break;
       case 7: { openPage(context, CardPage(), replace: false); }
+      break;
+      case 12: { openPage(context, OtherPage(), replace: false); }
       break;
     }
   }

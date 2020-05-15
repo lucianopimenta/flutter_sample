@@ -13,6 +13,6 @@ Future openPageTransition(BuildContext context, PageRouteBuilder builder) {
   return Navigator.push(context, builder);
 }
 
-Future closePage(BuildContext context, Widget page) {
+void closePage(BuildContext context, Widget page) {
   Navigator.pop(context, null);
 }

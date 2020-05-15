@@ -1,15 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttersample/components/button.dart';
-import 'package:fluttersample/helper/HttpRest.dart';
 import 'package:fluttersample/helper/helper.dart';
 import 'package:fluttersample/helper/navigation.dart';
 import 'package:fluttersample/helper/prefs.dart';
 import 'package:fluttersample/model/responseResult.dart';
 import 'package:fluttersample/pages/home_master_detail.dart';
 import 'package:http/http.dart' as http;
-
-import 'home_drawer.dart';
 
 class LoginPage extends StatefulWidget {
   @override

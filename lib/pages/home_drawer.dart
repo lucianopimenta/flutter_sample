@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluttersample/components/button.dart';
-import 'package:fluttersample/helper/navigation.dart';
 
 class HomePageDrawer extends StatefulWidget {
   HomePageDrawer({Key key, this.title}) : super(key: key);
@@ -11,10 +10,6 @@ class HomePageDrawer extends StatefulWidget {
 }
 
 class _HomePageDrawerState extends State<HomePageDrawer> {
-  void _incrementCounter() {
-    setState(() {
-    });
-  }
 
   @override
   Widget build(BuildContext context) {

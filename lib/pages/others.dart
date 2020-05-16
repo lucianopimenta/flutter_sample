@@ -1,6 +1,11 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttersample/components/button.dart';
 import 'package:fluttersample/helper/helper.dart';
+import 'package:fluttersample/helper/navigation.dart';
+import 'package:fluttersample/pages/badge.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 class OtherPage extends StatelessWidget {
 
@@ -17,12 +22,16 @@ class OtherPage extends StatelessWidget {
 
   _body(context){
     
-    return ListView(children: <Widget>[
-      ButtonDefault("Diálogo", () => DialogsHelper.messageDialog("Exemplo de ShowDialog", context)),
-      ButtonDefault("Toast", () => DialogsHelper.toast("Exemplo de Toast (plugin flutter_styled_toast)", context)),
-      ButtonDefault("Popup", () => _popup(context)),
-          ],);
-                
+    return ListView(
+      padding: EdgeInsets.all(10),
+      children: <Widget>[
+        ButtonDefault("Diálogo", () => DialogsHelper.messageDialog("Exemplo de ShowDialog", context)),
+        ButtonDefault("Toast", () => DialogsHelper.toast("Exemplo de Toast (plugin flutter_styled_toast)", context)),
+        ButtonDefault("Popup", () => _popup(context)),
+        Badge(position: BadgePosition.topRight(), badgeContent: Text('10'), child: ButtonDefault("Badge", () => openPage(context, OthersBadge(), replace: false)),),
+        //ButtonDefault("Font Awesome", () => openPage(context, FontAwesomeGalleryApp(), replace: false)),
+        // Text('Google Fonts', style: GoogleFonts.lato(fontStyle: FontStyle.italic),)
+      ]);
   }
 
   _popup(context){

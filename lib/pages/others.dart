@@ -6,6 +6,8 @@ import 'package:fluttersample/helper/navigation.dart';
 import 'package:fluttersample/pages/badge.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'font_awesome.dart';
+
 
 class OtherPage extends StatelessWidget {
 
@@ -29,8 +31,8 @@ class OtherPage extends StatelessWidget {
         ButtonDefault("Toast", () => DialogsHelper.toast("Exemplo de Toast (plugin flutter_styled_toast)", context)),
         ButtonDefault("Popup", () => _popup(context)),
         Badge(position: BadgePosition.topRight(), badgeContent: Text('10'), child: ButtonDefault("Badge", () => openPage(context, OthersBadge(), replace: false)),),
-        //ButtonDefault("Font Awesome", () => openPage(context, FontAwesomeGalleryApp(), replace: false)),
-        // Text('Google Fonts', style: GoogleFonts.lato(fontStyle: FontStyle.italic),)
+        ButtonDefault("Font Awesome", () => openPage(context, FontAwesomeGalleryApp(), replace: false)),
+         Center(child: Text('Google Fonts - plugin', style: GoogleFonts.lato(fontStyle: FontStyle.italic, fontSize: 30),))
       ]);
   }
 
